@@ -7,21 +7,22 @@
 <body>
  <!-- Display the countdown timer in an element -->
 <div style="font-size: 90px; padding-left: 100px; padding-top: 2px; padding-right: 100px; font-family: 'Droid Sans Mono', monospace;">
-<p>Time until arch day:</p>
-<p style="" id="demo"></p>
+	<p>Time until arch day:</p>
+	<p style="" id="demo"></p>
 </div>
-<p style="font-family: 'VT323', monospace;">Made in New York with love by <a href="https://www.github.com/Tpixelminer"> Todd Lee-Millstein</a></p>
+<p style="font-family: 'VT323', monospace;">Made in New York by <a href="https://www.github.com/Tpixelminer"> Todd Lee-Millstein</a></p>
+<p style="font-family: 'VT323', monospace;">Find this project on Github and do what you want with it <a href="https://github.com/Tpixelminer/summerbreakcount/tree/master">here.</a></p>
 <script>
-// Set the date we're counting down to
+
 var countDownDate = new Date("June 8, 2017 12:00:00").getTime();
 
-// Update the count down every 1 second
+
 var x = setInterval(function() {
 
-  // Get todays date and time
+  // Get the time
   var now = new Date().getTime();
 
-  // Find the distance between now an the count down date
+  // AAAND THE CALCULATIONISMS
   var distance = countDownDate - now;
 
   // Time calculations for days, hours, minutes and seconds
@@ -30,14 +31,14 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Display the result in the element with id="demo"
+  
   document.getElementById("demo").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
 
-  // If the count down is finished, write some text 
+  // YEET 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("demo").innerHTML = "YEET";
   }
 }, 1000);
 </script>
